@@ -1,0 +1,163 @@
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-secondary: #121212;
+  --text-primary: #eaeaea;
+  --text-muted: #a0a0a0;
+  --neon: #00ffcc;
+}
+
+/* BASE */
+body {
+  background-color: #000; /* preto absoluto */
+  color: var(--text-primary);
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER */
+.header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--neon);
+}
+
+/* HERO */
+.hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  color: var(--neon);
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  max-width: 520px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.btn.primary {
+  background: var(--neon);
+  color: #000;
+  margin-right: 16px;
+}
+
+.btn.secondary {
+  border: 1px solid var(--neon);
+  color: var(--neon);
+}
+
+/* =========================
+   HERO COM IMAGEM LATERAL
+   ========================= */
+
+/* 
+  Cria o layout em duas colunas:
+  - 1fr = imagem
+  - 1fr = texto
+*/
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 70px); /* altura da tela menos o header */
+  align-items: center;
+}
+
+/* COLUNA DA IMAGEM */
+.hero-image {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000; /* garante o mesmo preto da página */
+}
+
+/* A imagem ocupa toda a coluna */
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantém proporção sem distorcer */
+  filter: grayscale(100%) contrast(110%);
+}
+
+/* COLUNA DO TEXTO */
+.hero-content {
+  padding-left: 64px;
+}
+
+/* =========================
+   RESPONSIVO (MOBILE)
+   ========================= */
+
+@media (max-width: 900px) {
+
+  /* Empilha imagem e texto */
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajusta espaçamento */
+  .hero-content {
+    padding: 32px 0;
+  }
+
+}

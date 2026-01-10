@@ -1,0 +1,93 @@
+<!--Quando iniciamos o arquivo com html:5, o VS Code já estrutura automaticamente os elementos da página.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Formulario Aroma da Costa Pizzaria</title>
+</head>
+<body>
+    <h1>Aroma da Costa Pizzaria</h1>
+    <!-- TAG "h1"= Título -->
+    
+    <!--TAG para formulário é "form", o atributo "method" especifica o método HTTP a ser usado ao enviar dados do formulário para o servidor da web. "Action" é o destino para onde irão as informações.-->
+    <form action="teste.jsp" method="post"> <!--O método "post" é ideal para o envio de dados sensíveis, não é visível na URL-->
+        <!--"Input type" significa o tipo de entrada dos dados (abaixo por exemplo, corresponde a texto)-->
+        <!--O atributo "name" indica como queremos nomear o campo. --> 
+        <!--"label" define um rótulo para um item na interface. É fundamental para a acessibilidade (leitores de tela) e para a usabilidade. ("Nome" é como será chamado esse rótulo). -->
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+       
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Telefone:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+        <label for="address">Endereço:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="pizza">Faça o seu pedido:</label></br>  
+        <br> 
+
+        <!-- Essa parte do código permite que o usuário escolha entre as várias opções uma só. -->
+        <!-- Type="radio" define o campo como um botão circular. -->
+        <!-- Name="tamanho" é bastante importante, pois como todos os três inputs têm o mesmo nome, o navegador entende que eles pertencem ao mesmo grupo. Isso garante que, ao selecionar "Média", a opção "Grande" seja automaticamente desmarcada.-->
+        <!-- value="g/m/p" é um dado invisível que será enviado ao servidor (O usuário vê o texto "Grande", mas o sistema recebe apenas a letra "g". -->     
+        <input type="radio"  name="tamanho" value="g">Grande<br>
+        <input type="radio"  name="tamanho" value="m">Média<br>
+        <input type="radio"  name="tamanho" value="p">Pequena<br><br>  
+        
+        <!-- Este bloco de código cria uma lista suspensa (dropdown), que é uma forma compacta e organizada de oferecer várias opções ao usuário sem ocupar muito espaço na tela. -->
+        <!-- TAG "select" define o menu de seleção -->
+        <!-- VARIÁVEL name="sabor": É o nome que será enviado para o servidor. Quando o formulário for processado, o sistema buscará pelo que foi escolhido em "sabor".-->
+        <!-- id="sabor" é identificador exclusivo para este elemento, pode ser usado para aplicar estilos (CSS), manipular com JavaScript ou conectar a uma "label". -->
+        <!-- TAG "option" define cada item dentro da lista. -->
+        <!-- A TAG value="", primeira opção com o valor vazio, serve como instrução ("Selecione um sabor"). Como o campo é required, o navegador entende que o valor vazio não é uma escolha válida, forçando o usuário a escolher um sabor real. -->
+        <select name="sabor" id="sabor" required>
+            <option value="">Selecione um sabor</option>
+            <option value="mussarela">Mussarela</option>
+            <!-- O texto em maiúsculo = Mussarela é o que o cliente irá ver na tela.-->
+            <!--O atributo value "mussarela" é o dado enviado para o banco de dados. É preferível usar letras minúsculas e sem espaços nos valores a fim de evitar erros de programação. -->
+            <option value="calabresa">Calabresa</option>
+            <option value="portuguesa">Portuguesa</option>
+            <option value="frango">Frango com Catupiry</option>
+            <option value="quatro_queijos">Quatro Queijos</option>
+            <option value="marguerita">Marguerita</option>
+            <option value="vegana">Vegana</option>
+        </select><br><br>      
+        
+        <!-- Checkboxes são ideais para marcar múltiplas opções. -->
+        <!-- Type="checkbox", transforma o campo na caixinha quadrada que permite marcar (check) ou desmarcar.--> 
+        <!-- A conexão id + for (id="borda" do input igual ao for="borda" do label) permite que, se o cliente clicar na palavra "Borda Recheada", a caixinha seja marcada automaticamente. Isso melhora muito a experiência em celulares, onde o quadradinho é pequeno para o dedo.--> 
+        <input type="checkbox" id="borda" name="borda" value="borda_recheada">
+        <label for="borda">Borda Recheada</label><br><br>   
+        <input type="checkbox" id="queijo" name="queijo" value="queijo_extra">      
+        <label for="queijo">Queijo Extra</label><br><br>
+        
+        <!-- Campo de seleção de data: Esse código implementa um  padrão em HTML para criar um campo de seleção de data (date picker). Ele permite que o usuário escolha uma data em um calendário visual fornecido pelo próprio navegador. -->
+        <!-- Label for="dataentrega" define o rótulo "Data de Entrega:"-->
+        <!-- Type="date" é o que transforma uma caixa de texto comum em um seletor de data com calendário. -->
+        <!-- Name="dataentrega"	corresponde ao nome da "chave" que será enviada para o servidor quando o formulário for enviado. -->
+        <!-- Id="dataentrega" é o identificador usado para ligar o campo ao "label" e para ser manipulado via CSS ou JavaScript.-->
+        <label for="dataentrega">Data de Entrega:</label><br>   
+        <input type="date" name="dataentrega" id="dataentrega"><br>   
+        <br>
+
+        <!-- Código usado para criar uma caixa de texto de várias linhas. Ao contrário do campo de texto comum, o textarea permite que o usuário escreva parágrafos inteiros. -->
+        <!-- <label for="message"> Cria o rótulo "Mensagem:". O for="message" vincula o texto ao campo abaixo. Se o usuário clicar na palavra "Mensagem", o cursor foca automaticamente na caixa de texto. -->
+        <!-- TAG textarea define a área de texto expansível. Diferente da tag <input>, ela precisa ser fechada com </textarea>-->
+        <!-- Rows="4" É a altura visível inicial da caixa. Aqui 4 linhas de texto. -->
+        <!-- Cols="50" define a largura aproximada da caixa (cerca de 50 caracteres de largura). -->
+        <!-- Required torna o preenchimento obrigatório. O navegador impedirá o envio do formulário se o campo estiver vazio.-->
+        <label for="message">Mensagem:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- Este código cria o botão de envio do formulário. É o elemento que o usuário clica para finalizar o preenchimento e enviar todas as informações coletadas para o servidor ou para um e-mail. -->
+        <input type="submit" value="Enviar">
+        <!-- Input define um campo de entrada de dados.-->
+        <!-- Type="submit" transforma o campo em um botão especial. Quando clicado, ele aciona o evento de envio (submit) do formulário (form).-->
+        <!-- Value="Enviar" define o texto que aparece dentro do botão.-->
+    </form>
+    
+</body>
+</html>
