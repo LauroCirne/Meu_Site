@@ -67,6 +67,33 @@ body {
   color: var(--neon);
 }
 
+/* =========================================
+   BOTÃO DO MENU HAMBÚRGUER
+   ========================================= */
+
+/* Fica escondido no computador */
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* As três linhas do ícone */
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 6px 0;
+  background-color: var(--text-primary);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
 /* HERO */
 .hero {
   min-height: calc(100vh - 70px);
@@ -154,7 +181,17 @@ body {
    ========================================= */
 
 .technologies {
+  min-height: 100vh;
   padding: 80px 0;
+
+  display: flex;
+  align-items: center;
+
+  background: #080808;
+}
+
+.technologies > .container{
+    width:100%;
 }
 
 .technologies-title {
@@ -206,9 +243,16 @@ body {
    ========================= */
 
 .contact {
+    min-height: 100vh;
+
     max-width: 700px;
-    margin: 140px auto;
-    padding: 0 24px;
+    margin: 0 auto;
+    padding: 80px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     text-align: center;
 }
 
@@ -261,6 +305,9 @@ body {
   grid-template-columns: minmax(420px, 1fr) minmax(360px, 0.9fr);
   gap: 80px;
   align-items: center;
+
+  scroll-margin-top: 140px; /* Espaço para o header fixo */
+
 }
 
 /* ÁREA DAS IMAGENS */
@@ -415,5 +462,256 @@ body {
 
   .project-content h2 {
     font-size: 34px;
+  }
+}
+/* =========================================
+   AJUSTES DE RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  /* CONTAINER */
+  .container {
+    padding: 0 20px;
+  }
+
+ /* HEADER MOBILE */
+
+.header {
+  position: relative;
+}
+
+.header .container {
+  position: relative;
+  height: 70px;
+  min-height: 70px;
+  padding-top: 0;
+  padding-bottom: 0;
+  align-items: center;
+}
+
+.logo {
+  max-width: none;
+  line-height: 1.35;
+}
+
+/* Mostra o hambúrguer no celular */
+.menu-toggle {
+  display: block;
+  position: relative;
+  z-index: 11;
+}
+
+/* Menu fechado */
+.nav {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  width: 100%;
+  max-height: 0;
+  padding: 0 20px;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid #292929;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease,
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+/* Menu aberto */
+.nav.is-open {
+  max-height: 500px;
+  padding-top: 16px;
+  padding-bottom: 22px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav a {
+  width: 100%;
+  margin-left: 0;
+  padding: 13px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #242424;
+}
+
+.nav a:last-child {
+  border-bottom: none;
+}
+
+/* Hambúrguer se transforma em X */
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+  /* HERO */
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 36px;
+    padding-bottom: 72px;
+  }
+
+  .hero-image {
+    height: auto;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    object-fit: contain;
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(46px, 14vw, 64px);
+    line-height: 1.05;
+    margin-bottom: 28px;
+  }
+
+  .hero-content h2 {
+    font-size: 26px;
+    line-height: 1.55;
+    margin-bottom: 28px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .btn.primary {
+    margin-right: 0;
+  }
+
+  /* PROJETOS */
+  .projects {
+    padding: 72px 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .project-images {
+    min-height: 540px;
+  }
+
+  .project-images img {
+    width: 210px;
+  }
+
+  .project-images .login {
+    top: 70px;
+    left: 0;
+  }
+
+  .project-images .dashboard {
+    top: 10px;
+    right: 0;
+  }
+
+  .project-content h2 {
+    font-size: 42px;
+    line-height: 1.08;
+  }
+
+  .project-category {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .project-description {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .project-content .technology-list {
+    margin-bottom: 28px;
+  }
+
+  /* TECNOLOGIAS */
+  .technologies {
+    padding: 72px 0;
+  }
+
+  .technologies-title {
+    font-size: 38px;
+    margin-bottom: 34px;
+  }
+
+  .technology-group {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .technology-group h3 {
+    font-size: 20px;
+  }
+
+  .technology-list {
+    gap: 10px;
+  }
+
+  .technology-list li {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  /* CONTATO */
+  .contact {
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+
+  .contact h2 {
+    font-size: 42px;
+    margin-bottom: 28px;
+  }
+
+  .contact-text {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 38px;
   }
 }

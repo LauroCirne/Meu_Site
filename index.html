@@ -17,27 +17,50 @@
        HEADER
        ========================= -->
   <header class="header">
-    <div class="container">
-      <div class="logo">Lauro Cirne</div>
+  <div class="container">
 
-      <nav class="nav">
-        <a href="https://www.linkedin.com/in/lauro-cirne-785494391" target="_blank">
-          LinkedIn
-        </a>
-        <a
-  href="assets/img/PDF/Currículo Lauro Ayres Cirne.pdf"
-  target="_blank"
->
-  Currículo
-</a>
-        <a href="#tecnologias">Tecnologias</a>
-        <a href="#contato">Contato</a>
+    <!-- Nome exibido no topo -->
+    <div class="logo">Lauro Cirne</div>
 
-       
+    <!--
+      Botão do menu mobile.
+      As três tags span formam as três linhas do ícone hambúrguer.
+    -->
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menuNavegacao"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
+    <!-- Navegação principal -->
+    <nav class="nav" id="menuNavegacao">
 
-      </nav>
-    </div>
+      <a
+        href="https://www.linkedin.com/in/lauro-cirne-785494391"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="assets/img/PDF/Currículo Lauro Ayres Cirne.pdf"
+        target="_blank"
+      >
+        Currículo
+      </a>
+
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#contato">Contato</a>
+
+    </nav>
+  </div>
   </header>
 
   <!-- =========================
@@ -69,7 +92,9 @@
 
           <!-- BOTÕES -->
           <div class="hero-actions">
-            <a href="#projetos" class="btn primary">Ver Projetos</a>
+           <a href="#projetos" id="btnProjetos" class="btn primary">
+    Ver Projetos
+</a>
            <a href="https://github.com/LauroCirne" target="_blank" class="btn secondary">
            GitHub
            </a>
@@ -111,7 +136,7 @@
       <p class="project-description">
         Aplicativo desenvolvido durante a Residência em TIC
         da Universidade Federal do Rio Grande (FURG),
-        em parceria com a BRISA.
+        em parceria com a BRISA - Sociedade para o Desenvolvimento Tecnologia da Informação.
       </p>
 
       <p class="project-description">
@@ -199,9 +224,14 @@
         ficarei feliz em conversar sobre como posso contribuir com seu projeto ou equipe.
     </p>
 
-    <a href="mailto:seuemail@email.com" class="btn primary">
-        ✉ Enviar e-mail
-    </a>
+   <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=laurocirne.tech@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="btn primary"
+>
+  ✉ Enviar e-mail
+</a>
 
 </section>
 
@@ -213,5 +243,25 @@
     </section>
   </main>
 
+<script>
+const botaoProjetos = document.getElementById("btnProjetos");
+const projetos = document.getElementById("projetos");
+
+botaoProjetos.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const topo =
+        projetos.offsetTop -
+        (window.innerHeight / 2) +
+        (projetos.offsetHeight / 2);
+
+    window.scrollTo({
+        top: topo,
+        behavior: "smooth"
+    });
+});
+</script>
+
 </body>
 </html>
+
