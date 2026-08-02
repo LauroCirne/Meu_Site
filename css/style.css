@@ -1,3 +1,7 @@
+html{
+    scroll-behavior:smooth;
+}
+
 body {
   background-color: #0d0d0d;
   color: #ffffff;
@@ -14,8 +18,9 @@ body {
   --bg-dark: #0d0d0d;
   --bg-secondary: #121212;
   --text-primary: #eaeaea;
-  --text-muted: #a0a0a0;
-  --neon: #00ffcc;
+  --text-muted: #acacac;
+  --neon: #8a8b8d
+  ;
 }
 
 /* BASE */
@@ -144,6 +149,86 @@ body {
   padding-left: 64px;
 }
 
+/* =========================================
+   SEÇÃO TECNOLOGIAS
+   ========================================= */
+
+.technologies {
+  padding: 80px 0;
+}
+
+.technologies-title {
+  margin-bottom: 40px;
+}
+
+.technology-group {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  padding: 24px 0;
+  border-top: 1px solid #222;
+}
+
+.technology-group:last-child {
+  border-bottom: 1px solid #222;
+}
+
+.technology-group h3 {
+  color: var(--neon);
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.technology-list li {
+  padding: 10px 16px;
+  border: 1px solid #444;
+  border-radius: 999px;
+  color: var(--text-primary);
+  background: #151515;
+  transition: .2s;
+}
+
+.technology-list li:hover {
+  background: #2b2b2b;
+  border-color: #6b6b6b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+/* =========================
+   CONTATO
+   ========================= */
+
+.contact {
+    max-width: 700px;
+    margin: 140px auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+.contact-text {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.contact .btn {
+    padding: 14px 34px;
+}
+
 /* =========================
    RESPONSIVO (MOBILE)
    ========================= */
@@ -160,4 +245,175 @@ body {
     padding: 32px 0;
   }
 
+}
+/* =========================================
+   PROJETO EM DESTAQUE
+   ========================================= */
+
+.projects {
+  padding: 100px 0;
+  background-color: #080808;
+  border-top: 1px solid #202020;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) minmax(360px, 0.9fr);
+  gap: 80px;
+  align-items: center;
+}
+
+/* ÁREA DAS IMAGENS */
+
+.project-images {
+  position: relative;
+  min-height: 680px;
+}
+
+/* MOCKUP DAS TELAS */
+
+.project-images img {
+  position: absolute;
+  display: block;
+  width: 270px;
+  border: 8px solid #161616;
+  border-radius: 34px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.55);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Tela de login na frente */
+
+.project-images .login {
+  top: 80px;
+  left: 25px;
+  z-index: 2;
+  transform: rotate(-4deg);
+}
+
+/* Dashboard um pouco atrás */
+
+.project-images .dashboard {
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  transform: rotate(4deg);
+}
+
+/* Movimento suave */
+
+.project-images:hover .login {
+  transform: rotate(-4deg) translateY(-8px);
+  border-color: #4f4f4f;
+  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-images:hover .dashboard {
+  transform: rotate(4deg) translateY(-4px);
+  border-color: #3d3d3d;
+}
+
+/* CONTEÚDO DO PROJETO */
+
+.project-content h2 {
+  margin-bottom: 14px;
+  color: var(--text-primary);
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 1.1;
+}
+
+.project-category {
+  margin-bottom: 28px;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.project-description {
+  margin-bottom: 18px;
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.project-status {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 30px 0;
+}
+
+.project-status strong {
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.project-status span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Tecnologias específicas do projeto */
+
+.project-content .technology-list {
+  margin-bottom: 34px;
+}
+
+/* Botão */
+
+.project-content .btn {
+  margin-top: 0;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 950px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .project-images {
+    width: 100%;
+    max-width: 620px;
+    min-height: 630px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .projects {
+    padding: 72px 0;
+  }
+
+  .project-images {
+    min-height: 500px;
+  }
+
+  .project-images img {
+    width: 205px;
+    border-width: 6px;
+    border-radius: 28px;
+  }
+
+  .project-images .login {
+    top: 70px;
+    left: 0;
+  }
+
+  .project-images .dashboard {
+    top: 20px;
+    right: 0;
+  }
+
+  .project-content h2 {
+    font-size: 34px;
+  }
 }
