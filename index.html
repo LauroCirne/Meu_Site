@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- TÍTULO DO SITE (ABA DO NAVEGADOR) -->
-  <title>Lauro Cirne | Desenvolvedor Full Stack</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <!-- CSS PRINCIPAL -->
+  <!-- Título exibido na aba do navegador -->
+  <title>Lauro Cirne | Desenvolvedor</title>
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,252 +21,372 @@
   <!-- =========================
        HEADER
        ========================= -->
+
   <header class="header">
-  <div class="container">
+    <div class="container">
 
-    <!-- Nome exibido no topo -->
-    <div class="logo">Lauro Cirne</div>
+      <!-- Nome exibido no topo -->
+      <div class="logo">Lauro Cirne</div>
 
-    <!--
-      Botão do menu mobile.
-      As três tags span formam as três linhas do ícone hambúrguer.
-    -->
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      aria-label="Abrir menu"
-      aria-expanded="false"
-      aria-controls="menuNavegacao"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Navegação principal -->
-    <nav class="nav" id="menuNavegacao">
-
-      <a
-        href="https://www.linkedin.com/in/lauro-cirne-785494391"
-        target="_blank"
-        rel="noopener noreferrer"
+      <!-- Botão do menu mobile -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menuNavegacao"
       >
-        LinkedIn
-      </a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <a
-        href="assets/img/PDF/Currículo Lauro Ayres Cirne.pdf"
-        target="_blank"
-      >
-        Currículo
-      </a>
+      <!-- Navegação principal -->
+      <nav class="nav" id="menuNavegacao">
 
-      <a href="#tecnologias">Tecnologias</a>
-      <a href="#contato">Contato</a>
+        <a
+          href="https://www.linkedin.com/in/lauro-cirne-785494391"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
 
-    </nav>
-  </div>
+        <a
+          href="assets/img/PDF/Currículo Lauro Ayres Cirne.pdf"
+          target="_blank"
+        >
+          Currículo
+        </a>
+
+        <a href="#tecnologias">
+          Tecnologias
+        </a>
+
+        <a href="#contato">
+          Contato
+        </a>
+
+      </nav>
+
+    </div>
   </header>
 
+
   <!-- =========================
-       HERO
+       CONTEÚDO PRINCIPAL
        ========================= -->
+
   <main>
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
     <section class="hero">
       <div class="container hero-grid">
 
-        <!-- COLUNA ESQUERDA: FOTO -->
+        <!-- Imagem -->
         <div class="hero-image">
-          <img src="assets/img/perfil.jpg" alt="Foto de Lauro Cirne">
+          <img
+            src="assets/img/perfil.jpg"
+            alt="Foto de Lauro Cirne"
+          >
         </div>
 
-        <!-- COLUNA DIREITA: TEXTO -->
+        <!-- Apresentação -->
         <div class="hero-content">
-          <h1>Lauro Cirne</h1>
-          <h2>
-  Desenvolvedor
-  com ênfase <br> em
-  Front-end, UI/UX e Design.
-</h2>
 
-          <!-- FRASE DE IMPACTO -->
+          <h1>Lauro Cirne</h1>
+
+          <h2>
+            Desenvolvedor<br>
+            com ênfase em<br>
+            Front-end, UI/UX e Design.
+          </h2>
+
           <p class="hero-text">
             Construo interfaces claras, funcionais e bem estruturadas,
             unindo lógica, design e tecnologia.
           </p>
 
-          <!-- BOTÕES -->
           <div class="hero-actions">
-           <a href="#projetos" id="btnProjetos" class="btn primary">
-    Ver Projetos
-</a>
-           <a href="https://github.com/LauroCirne" target="_blank" class="btn secondary">
-           GitHub
-           </a>
+
+            <a
+              href="#projetos"
+              id="btnProjetos"
+              class="btn primary"
+            >
+              Ver Projetos
+            </a>
+
+            <a
+              href="https://github.com/LauroCirne"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn secondary"
+            >
+              GitHub
+            </a>
+
           </div>
+
         </div>
 
       </div>
     </section>
+
+
     <!-- =========================
-     PROJETOS
-========================= -->
+         PROJETOS
+         ========================= -->
 
-<section id="projetos" class="projects">
+    <section id="projetos" class="projects">
+      <div class="container project-grid">
 
-  <div class="container project-grid">
+        <!-- Imagens do projeto -->
+        <div class="project-images">
 
-    <!-- IMAGENS -->
-    <div class="project-images">
+          <img
+            src="assets/img/Dashboard.png"
+            alt="Tela principal do aplicativo Alô Barata Tintas Connect"
+            class="dashboard"
+          >
 
-      <img src="assets/img/Dashboard.png"
-           alt="Dashboard"
-           class="dashboard">
+          <img
+            src="assets/img/Login.png"
+            alt="Tela de login do aplicativo Alô Barata Tintas Connect"
+            class="login"
+          >
 
-      <img src="assets/img/Login.png"
-           alt="Tela de Login"
-           class="login">
+        </div>
 
-    </div>
+        <!-- Informações do projeto -->
+        <div class="project-content">
 
-    <!-- TEXTO -->
-    <div class="project-content">
+          <h2>Alô Barata Tintas Connect</h2>
 
-      <h2>Alô Barata Tintas Connect</h2>
+          <p class="project-category">
+            UX/UI Design • Figma • Design System
+          </p>
 
-      <p class="project-category">
-        UX/UI Design • Figma • Design System
-      </p>
+          <p class="project-description">
+            Aplicativo desenvolvido durante a Residência em TIC
+            da Universidade Federal do Rio Grande (FURG), em parceria
+            com a BRISA — Sociedade para o Desenvolvimento da
+            Tecnologia da Informação.
+          </p>
 
-      <p class="project-description">
-        Aplicativo desenvolvido durante a Residência em TIC
-        da Universidade Federal do Rio Grande (FURG),
-        em parceria com a BRISA - Sociedade para o Desenvolvimento Tecnologia da Informação.
-      </p>
+          <p class="project-description">
+            Organização de tarefas, equipes e processos internos
+            para o varejo.
+          </p>
 
-      <p class="project-description">
-        Organização de tarefas, equipes e processos internos
-        para o varejo.
-      </p>
+          <div class="project-status">
+            <strong>Projeto em desenvolvimento</strong>
+            <span>Previsão: setembro de 2026</span>
+          </div>
 
-      <div class="project-status">
-        <strong>Projeto em desenvolvimento</strong>
-        <span>Previsão: setembro de 2026</span>
+          <ul class="technology-list">
+            <li>Figma</li>
+            <li>UX/UI</li>
+            <li>Design System</li>
+            <li>Prototipação</li>
+            <li>Pesquisa</li>
+          </ul>
+
+          <!-- Ainda não possui página própria -->
+          <a
+            href="#projetos"
+            class="btn primary"
+            aria-disabled="true"
+            onclick="return false;"
+          >
+            Ver estudo de caso
+          </a>
+
+        </div>
+
       </div>
+    </section>
 
-      <ul class="technology-list">
-        <li>Figma</li>
-        <li>UX/UI</li>
-        <li>Design System</li>
-        <li>Prototipação</li>
-        <li>Pesquisa</li>
-      </ul>
 
-      <a href="#" class="btn primary">
-        Ver estudo de caso
+    <!-- =========================
+         TECNOLOGIAS
+         ========================= -->
+
+    <section id="tecnologias" class="technologies">
+      <div class="container">
+
+        <h2 class="technologies-title">
+          Tecnologias
+        </h2>
+
+        <!-- Desenvolvimento -->
+        <div class="technology-group">
+
+          <h3>Desenvolvimento</h3>
+
+          <ul class="technology-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>SQL</li>
+          </ul>
+
+        </div>
+
+        <!-- Design -->
+        <div class="technology-group">
+
+          <h3>Design</h3>
+
+          <ul class="technology-list">
+            <li>Figma</li>
+            <li>UX Design</li>
+            <li>UI Design</li>
+            <li>Prototipação</li>
+            <li>Design System</li>
+          </ul>
+
+        </div>
+
+        <!-- Dados -->
+        <div class="technology-group">
+
+          <h3>Dados</h3>
+
+          <ul class="technology-list">
+            <li>Power BI</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+         ========================= -->
+
+    <section id="contato" class="contact">
+
+      <h2>Contato</h2>
+
+      <p class="contact-text">
+        Se você procura alguém comprometido e em constante evolução,
+        ficarei feliz em conversar sobre como posso contribuir com seu
+        projeto ou equipe.
+      </p>
+
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=laurocirne.tech@gmail.com&su=Contato%20pelo%20Portfólio"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn primary"
+      >
+        ✉ Enviar e-mail
       </a>
 
-    </div>
-
-  </div>
-
-</section>
-   <!-- =========================
-     TECNOLOGIAS
-     ========================= -->
-<section id="tecnologias" class="technologies">
-  <div class="container">
-
-    <!-- Título principal da seção -->
-    <h2 class="technologies-title">Tecnologias</h2>
-
-    <!-- Categoria: Desenvolvimento -->
-    <div class="technology-group">
-      <h3>Desenvolvimento</h3>
-
-      <ul class="technology-list">
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>SQL</li>
-      </ul>
-    </div>
-
-    <!-- Categoria: Design -->
-    <div class="technology-group">
-      <h3>Design</h3>
-
-      <ul class="technology-list">
-        <li>Figma</li>
-        <li>UX Design</li>
-        <li>UI Design</li>
-        <li>Prototipação</li>
-        <li>Design System</li>
-      </ul>
-    </div>
-
-    <!-- Categoria: Dados -->
-    <div class="technology-group">
-      <h3>Dados</h3>
-
-      <ul class="technology-list">
-        <li>Power BI</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
- <section id="contato" class="contact">
-
-    <h2>Contato</h2>
-
-    <p class="contact-text">
-        Se você procura alguém comprometido e em constante evolução,
-        ficarei feliz em conversar sobre como posso contribuir com seu projeto ou equipe.
-    </p>
-
-   <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=laurocirne.tech@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="btn primary"
->
-  ✉ Enviar e-mail
-</a>
-
-</section>
-
     </section>
-          </article>
 
-        </div>
-      </div>
-    </section>
   </main>
 
-<script>
-const botaoProjetos = document.getElementById("btnProjetos");
-const projetos = document.getElementById("projetos");
 
-botaoProjetos.addEventListener("click", function (e) {
-    e.preventDefault();
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
 
-    const topo =
+  <script>
+
+    /* BOTÃO VER PROJETOS */
+
+    const botaoProjetos =
+      document.getElementById("btnProjetos");
+
+    const projetos =
+      document.getElementById("projetos");
+
+    botaoProjetos.addEventListener("click", function (evento) {
+      evento.preventDefault();
+
+      const topo =
         projetos.offsetTop -
-        (window.innerHeight / 2) +
-        (projetos.offsetHeight / 2);
+        window.innerHeight / 2 +
+        projetos.offsetHeight / 2;
 
-    window.scrollTo({
+      window.scrollTo({
         top: topo,
         behavior: "smooth"
+      });
     });
-});
-</script>
+
+
+    /* MENU HAMBÚRGUER */
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const menuNavegacao =
+      document.getElementById("menuNavegacao");
+
+    const linksDoMenu =
+      menuNavegacao.querySelectorAll("a");
+
+    menuToggle.addEventListener("click", function () {
+
+      const menuEstaAberto =
+        menuNavegacao.classList.toggle("is-open");
+
+      menuToggle.classList.toggle(
+        "is-open",
+        menuEstaAberto
+      );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(menuEstaAberto)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        menuEstaAberto ? "Fechar menu" : "Abrir menu"
+      );
+
+    });
+
+
+    /* Fecha o menu depois de selecionar um link */
+
+    linksDoMenu.forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        menuNavegacao.classList.remove("is-open");
+        menuToggle.classList.remove("is-open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Abrir menu"
+        );
+
+      });
+
+    });
+
+  </script>
 
 </body>
-</html>
 
+</html>
