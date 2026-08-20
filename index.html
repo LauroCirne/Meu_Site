@@ -9,49 +9,61 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- Título exibido na aba do navegador -->
   <title>Lauro Cirne | Desenvolvedor</title>
 
-   <!-- Prévia para LinkedIn, WhatsApp e outras redes -->
-    <meta property="og:title"
-          content="Lauro Cirne | Front-end, UI/UX e Design">
+  <!-- Prévia para compartilhamento -->
+  <meta
+    property="og:title"
+    content="Lauro Cirne | Front-end, UI/UX e Design"
+  >
 
-    <meta property="og:description"
-          content="Portfólio com projetos e estudos em Front-end, UI/UX e Design.">
+  <meta
+    property="og:description"
+    content="Portfólio com projetos e estudos em Front-end, UI/UX e Design."
+  >
 
-    <meta  property="og:image"
+  <meta
+    property="og:image"
     content="https://laurocirne.github.io/Meu_Site/assets/preview.png"
->
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+  >
 
-    <meta property="og:url"
-          content="https://laurocirne.github.io/Meu_Site/">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-    <meta property="og:type" content="website">
+  <meta
+    property="og:url"
+    content="https://laurocirne.github.io/Meu_Site/"
+  >
 
-    <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
 
-   <meta name="twitter:image"
-content="https://laurocirne.github.io/Meu_Site/assets/preview.png">
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://laurocirne.github.io/Meu_Site/assets/preview.png"
+  >
 
   <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
 
-  <!-- =========================
-       HEADER
-       ========================= -->
-
+  <!-- Cabeçalho -->
   <header class="header">
+
     <div class="container">
 
-      <!-- Nome exibido no topo -->
-      <div class="logo">Lauro Cirne</div>
+      <div class="logo">
+        Lauro Cirne
+      </div>
 
-      <!-- Botão do menu mobile -->
+      <!-- Menu mobile -->
       <button
         class="menu-toggle"
         id="menuToggle"
@@ -65,22 +77,23 @@ content="https://laurocirne.github.io/Meu_Site/assets/preview.png">
         <span></span>
       </button>
 
-      <!-- Navegação principal -->
-      <nav class="nav" id="menuNavegacao">
 
-        <a
-          href="https://www.linkedin.com/in/lauro-cirne-785494391"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
+      <!-- Menu principal -->
+      <nav
+        class="nav"
+        id="menuNavegacao"
+      >
+
+        <a href="#sobre">
+          Sobre mim
         </a>
 
-        <a
-          href="assets/img/PDF/Currículo Lauro Ayres Cirne.pdf"
-          target="_blank"
-        >
-          Currículo
+        <a href="#formacao">
+          Formação
+        </a>
+
+        <a href="#projetos">
+          Portfólio
         </a>
 
         <a href="#tecnologias">
@@ -94,45 +107,66 @@ content="https://laurocirne.github.io/Meu_Site/assets/preview.png">
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- =========================
-       CONTEÚDO PRINCIPAL
-       ========================= -->
 
   <main>
 
-    <!-- =========================
-         HERO
-         ========================= -->
+    <!-- Sobre mim -->
+    <section
+      id="sobre"
+      class="hero"
+    >
 
-    <section class="hero">
       <div class="container hero-grid">
 
-        <!-- Imagem -->
         <div class="hero-image">
+
           <img
             src="assets/img/perfil.jpg"
             alt="Foto de Lauro Cirne"
           >
+
         </div>
 
-        <!-- Apresentação -->
+
         <div class="hero-content">
 
-          <h1>Lauro Cirne</h1>
+          <h1>
+            Lauro Cirne
+          </h1>
 
           <h2>
-            Desenvolvedor
-            com ênfase<br>em
-            Front-end, UI/UX e Design.
+            Desenvolvedor com ênfase<br>
+            em Front-end, UI/UX e Design.
           </h2>
+          <p class="hero-highlight">
+          ENTRE CÓDIGO E DESIGN, TRANSFORMO IDEIAS EM EXPERIÊNCIAS.
+          </p>
+                    
+          <p class="hero-text">
+            Foi no desenvolvimento que encontrei uma forma
+            de unir universos que sempre fizeram parte da minha trajetória:
+            arte e tecnologia. Gosto de entender como as coisas funcionam,
+            resolver problemas e criar soluções que facilitem a vida das pessoas, com
+            beleza e funcionalidade.
+            Atualmente curso Análise e Desenvolvimento de Sistemas e tenho 
+            vivenciado projetos em Front-end e UI/UX, campos com os quais me identifico.
+            Mas não me limito, tenho interesse pelo desenvolvimento como um todo,
+            sempre aberto a conhecer novas linguagens e diferentes formas de construir soluções.
+            
+
+          </p>
+
 
           <p class="hero-text">
-            Construo interfaces claras, funcionais e bem estruturadas,
-            unindo lógica, design e tecnologia.
+            Aprender continuamente é uma das coisas que mais me motivam. 
+            Cada novo conhecimento abre diferentes possibilidades
+            e reforça ainda mais minha vontade de continuar evoluindo.
           </p>
+
 
           <div class="hero-actions">
 
@@ -143,6 +177,7 @@ content="https://laurocirne.github.io/Meu_Site/assets/preview.png">
             >
               Ver Projetos
             </a>
+
 
             <a
               href="https://github.com/LauroCirne"
@@ -158,17 +193,115 @@ content="https://laurocirne.github.io/Meu_Site/assets/preview.png">
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- =========================
-         PROJETOS
-         ========================= -->
 
-    <section id="projetos" class="projects">
+    <!-- Formação -->
+    <section
+      id="formacao"
+      class="formation"
+    >
+
+      <div class="container">
+
+        <h2>
+          Formação
+        </h2>
+
+
+        <div class="formation-list">
+
+          <article class="formation-item">
+
+            <h3>
+              Análise e Desenvolvimento de Sistemas
+            </h3>
+
+            <p>
+              Centro Universitário Internacional UNINTER
+              2025 — Em andamento. 
+            </p>
+
+            <p> 
+              Formação voltada à análise, planejamento e 
+              desenvolvimento de sistemas e aplicações, com conhecimentos 
+              em programação, banco de dados, desenvolvimento de software 
+              e gestão de projetos.
+            </p>
+
+          </article>
+
+
+          <article class="formation-item">
+
+            
+            <h3>
+              Residência em TIC 2026
+            </h3>
+
+            <p>
+              Programa de formação prática em Tecnologia da Informação e Comunicação (TIC) 
+              voltado ao desenvolvimento de soluções tecnológicas para demandas 
+              reais do mercado.
+              Realizado pela Universidade Federal do Rio Grande (FURG), em parceria 
+              com a Brisa Sociedade para o Desenvolvimento da Tecnologia da Informação, 
+              Softex e Ministério da Ciência, Tecnologia e Inovações.
+            </p>
+
+            
+          </article>
+
+
+          <article class="formation-item">
+
+            <h3>
+              Pós-graduação em Gestão de Negócios Portuários e Logística
+            </h3>
+
+            <p>
+              Centro Universitário Internacional UNINTER —
+              Concluído em 2025.
+            </p>
+
+            <p>
+              Especialização voltada à gestão estratégica de operações, processos logísticos
+              e negócios portuários. Essa formação ampliou minha visão sobre planejamento, 
+              organização de processos e resolução de problemas, conhecimentos que hoje também 
+              contribuem para a forma como analiso e desenvolvo soluções digitais.
+            </p>
+
+          </article>
+
+        </div>
+              
+        <div class="formation-actions">
+
+      <a
+      href="assets/img/PDF/Currículo Lauro Ayres Cirne.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn secondary"
+      >
+       Ver currículo
+      </a>
+
+</div>
+      </div>
+
+    </section>
+
+
+
+    <!-- Portfólio -->
+    <section
+      id="projetos"
+      class="projects"
+    >
+
       <div class="container project-grid">
 
-        <!-- Imagens do projeto -->
         <div class="project-images">
 
           <img
@@ -185,73 +318,95 @@ content="https://laurocirne.github.io/Meu_Site/assets/preview.png">
 
         </div>
 
-        <!-- Informações do projeto -->
+
         <div class="project-content">
 
-          <h2>Alô Barata Tintas Connect</h2>
+          <h2>
+            Alô Barata Tintas Connect
+          </h2>
+
 
           <p class="project-category">
-            UX/UI Design • Figma • Design System
+           UX/UI Design • Product Thinking • Figma • Design System
           </p>
 
-          <p class="project-description">
-            Aplicativo desenvolvido durante a Residência em TIC
-            da Universidade Federal do Rio Grande (FURG), em parceria
-            com a BRISA — Sociedade para o Desenvolvimento da
-            Tecnologia da Informação.
-          </p>
 
           <p class="project-description">
-            Organização de tarefas, equipes e processos internos
-            para o varejo.
+            Atuação em UX/UI Design e Product Thinking, passando por pesquisa e análise do 
+            problema, benchmark, mapa de empatia, casos de uso, prototipação e Design System. 
+            Participo também da estruturação da gamificação e do modelo de precificação, 
+            além do desenvolvimento da landing page do produto.
           </p>
+
+
+          <p class="project-description">
+            Solução digital para gestão de tarefas, equipes e processos, que busca 
+            simplificar a rotina operacional, padronizar atividades e aumentar o engajamento 
+            por meio da gamificação.
+          </p>
+
 
           <div class="project-status">
-            <strong>Projeto em desenvolvimento</strong>
-            <span>Previsão: setembro de 2026</span>
+
+            <strong>
+              Projeto em desenvolvimento.
+            </strong>
+
+            <span>
+              Previsão de conclusão: setembro de 2026.
+            </span>
+
           </div>
 
+
           <ul class="technology-list">
+
             <li>Figma</li>
             <li>UX/UI</li>
             <li>Design System</li>
             <li>Prototipação</li>
             <li>Pesquisa</li>
+
           </ul>
 
-          <!-- Ainda não possui página própria -->
-          <a
-            href="#projetos"
+
+          <button
+            type="button"
             class="btn primary"
-            aria-disabled="true"
-            onclick="return false;"
+            disabled
           >
-            Ver estudo de caso
-          </a>
+            Estudo de caso em breve
+          </button>
 
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- =========================
-         TECNOLOGIAS
-         ========================= -->
 
-    <section id="tecnologias" class="technologies">
+    <!-- Tecnologias -->
+    <section
+      id="tecnologias"
+      class="technologies"
+    >
+
       <div class="container">
 
         <h2 class="technologies-title">
           Tecnologias
         </h2>
 
-        <!-- Desenvolvimento -->
+
         <div class="technology-group">
 
-          <h3>Desenvolvimento</h3>
+          <h3>
+            Desenvolvimento
+          </h3>
 
           <ul class="technology-list">
+
             <li>HTML5</li>
             <li>CSS3</li>
             <li>JavaScript</li>
@@ -260,109 +415,186 @@ content="https://laurocirne.github.io/Meu_Site/assets/preview.png">
             <li>Git</li>
             <li>GitHub</li>
             <li>SQL</li>
+
           </ul>
 
         </div>
 
-        <!-- Design -->
+
         <div class="technology-group">
 
-          <h3>Design</h3>
+          <h3>
+            Design
+          </h3>
 
           <ul class="technology-list">
+
             <li>Figma</li>
             <li>UX Design</li>
             <li>UI Design</li>
             <li>Prototipação</li>
             <li>Design System</li>
+
           </ul>
 
         </div>
 
-        <!-- Dados -->
+
         <div class="technology-group">
 
-          <h3>Dados</h3>
+          <h3>
+            Dados
+          </h3>
 
           <ul class="technology-list">
+
             <li>Power BI</li>
+
           </ul>
 
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- =========================
-         CONTATO
-         ========================= -->
 
-    <section id="contato" class="contact">
+    <!-- Contato -->
+    <section
+      id="contato"
+      class="contact"
+    >
 
-      <h2>Contato</h2>
+      <h2>
+        Contato
+      </h2>
+
 
       <p class="contact-text">
         Se você procura alguém comprometido e em constante evolução,
-        ficarei feliz em conversar sobre como posso contribuir com seu
-        projeto ou equipe.
+        ficarei feliz em conversar sobre como posso contribuir
+        com seu projeto ou equipe.
       </p>
 
-      <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=laurocirne.tech@gmail.com&su=Contato%20pelo%20Portfólio"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn primary"
+
+      <!-- Formulário solicitado na atividade -->
+      <form
+         id="contactForm"
+         class="contact-form"
+         action="https://formspree.io/f/xgawrrkq"
+         method="POST"
+         novalidate
+
       >
-        ✉ Enviar e-mail
-      </a>
+
+
+        <div class="form-group">
+
+          <label for="nome">
+            Nome
+          </label>
+
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+          >
+
+          <span
+            class="form-error"
+            id="erroNome"
+          ></span>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label for="email">
+            E-mail
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seuemail@exemplo.com"
+          >
+
+          <span
+            class="form-error"
+            id="erroEmail"
+          ></span>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label for="mensagem">
+            Mensagem
+          </label>
+
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="6"
+            placeholder="Digite sua mensagem"
+          ></textarea>
+
+          <span
+            class="form-error"
+            id="erroMensagem"
+          ></span>
+
+        </div>
+
+
+
+        <button
+          type="submit"
+          class="btn primary"
+        >
+          Enviar mensagem
+        </button>
+
+      </form>
+
+
+      <!-- Mensagem apresentada depois da validação -->
+      <div
+        id="mensagemSucesso"
+        class="form-success"
+        aria-live="polite"
+      ></div>
 
     </section>
 
   </main>
 
 
-  <!-- =========================
-       JAVASCRIPT
-       ========================= -->
 
   <script>
 
-    /* BOTÃO VER PROJETOS */
+    /* Menu mobile */
 
-    const botaoProjetos =
-      document.getElementById("btnProjetos");
+  const menuToggle =
+    document.getElementById("menuToggle");
 
-    const projetos =
-      document.getElementById("projetos");
+  const menuNavegacao =
+    document.getElementById("menuNavegacao");
 
-    botaoProjetos.addEventListener("click", function (evento) {
-      evento.preventDefault();
-
-      const topo =
-        projetos.offsetTop -
-        window.innerHeight / 2 +
-        projetos.offsetHeight / 2;
-
-      window.scrollTo({
-        top: topo,
-        behavior: "smooth"
-      });
-    });
+  const linksDoMenu =
+    menuNavegacao.querySelectorAll("a");
 
 
-    /* MENU HAMBÚRGUER */
-
-    const menuToggle =
-      document.getElementById("menuToggle");
-
-    const menuNavegacao =
-      document.getElementById("menuNavegacao");
-
-    const linksDoMenu =
-      menuNavegacao.querySelectorAll("a");
-
-    menuToggle.addEventListener("click", function () {
+  menuToggle.addEventListener(
+    "click",
+    function () {
 
       const menuEstaAberto =
         menuNavegacao.classList.toggle("is-open");
@@ -379,37 +611,232 @@ content="https://laurocirne.github.io/Meu_Site/assets/preview.png">
 
       menuToggle.setAttribute(
         "aria-label",
-        menuEstaAberto ? "Fechar menu" : "Abrir menu"
+        menuEstaAberto
+          ? "Fechar menu"
+          : "Abrir menu"
       );
 
-    });
+    }
+  );
 
 
-    /* Fecha o menu depois de selecionar um link */
+  /* Fecha o menu depois que um link é selecionado */
 
-    linksDoMenu.forEach(function (link) {
+  linksDoMenu.forEach(
+    function (link) {
 
-      link.addEventListener("click", function () {
+      link.addEventListener(
+        "click",
+        function () {
 
-        menuNavegacao.classList.remove("is-open");
-        menuToggle.classList.remove("is-open");
+          menuNavegacao.classList.remove(
+            "is-open"
+          );
 
-        menuToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+          menuToggle.classList.remove(
+            "is-open"
+          );
 
-        menuToggle.setAttribute(
-          "aria-label",
-          "Abrir menu"
-        );
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
-      });
+          menuToggle.setAttribute(
+            "aria-label",
+            "Abrir menu"
+          );
 
-    });
+        }
+      );
 
-  </script>
+    }
+  );
 
+
+  /* Formulário de contato */
+
+  const formulario =
+    document.getElementById("contactForm");
+
+  const nome =
+    document.getElementById("nome");
+
+  const email =
+    document.getElementById("email");
+
+  const mensagem =
+    document.getElementById("mensagem");
+
+  const erroNome =
+    document.getElementById("erroNome");
+
+  const erroEmail =
+    document.getElementById("erroEmail");
+
+  const erroMensagem =
+    document.getElementById("erroMensagem");
+
+  const mensagemSucesso =
+    document.getElementById("mensagemSucesso");
+
+  const botaoEnviar =
+    formulario.querySelector(
+      'button[type="submit"]'
+    );
+
+
+  /* Verifica o formato do endereço de e-mail */
+
+  function emailValido(emailDigitado) {
+
+    const expressaoEmail =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    return expressaoEmail.test(
+      emailDigitado
+    );
+
+  }
+
+
+  /* Validação e envio do formulário */
+
+  formulario.addEventListener(
+    "submit",
+    async function (evento) {
+
+      evento.preventDefault();
+
+      let formularioValido = true;
+
+
+      /* Limpa mensagens anteriores */
+
+      erroNome.textContent = "";
+      erroEmail.textContent = "";
+      erroMensagem.textContent = "";
+      mensagemSucesso.textContent = "";
+
+
+      /* Validação do nome */
+
+      if (nome.value.trim() === "") {
+
+        erroNome.textContent =
+          "Informe seu nome.";
+
+        formularioValido = false;
+
+      }
+
+
+      /* Validação do e-mail */
+
+      if (email.value.trim() === "") {
+
+        erroEmail.textContent =
+          "Informe seu e-mail.";
+
+        formularioValido = false;
+
+      } else if (
+        !emailValido(email.value)
+      ) {
+
+        erroEmail.textContent =
+          "Digite um e-mail válido.";
+
+        formularioValido = false;
+
+      }
+
+
+      /* Validação da mensagem */
+
+      if (
+        mensagem.value.trim() === ""
+      ) {
+
+        erroMensagem.textContent =
+          "Digite uma mensagem.";
+
+        formularioValido = false;
+
+      }
+
+
+      /* Interrompe caso algum campo esteja incorreto */
+
+      if (!formularioValido) {
+        return;
+      }
+
+
+      /* Prepara os dados para envio */
+
+      const dadosFormulario =
+        new FormData(formulario);
+
+
+      /* Evita vários envios enquanto a mensagem é processada */
+
+      botaoEnviar.disabled = true;
+      botaoEnviar.textContent =
+        "Enviando...";
+
+
+      try {
+
+        const resposta =
+          await fetch(
+            formulario.action,
+            {
+              method: "POST",
+              body: dadosFormulario,
+              headers: {
+                "Accept": "application/json"
+              }
+            }
+          );
+
+
+        /* Confirma o envio */
+
+        if (resposta.ok) {
+
+          mensagemSucesso.textContent =
+            "Mensagem enviada com sucesso!";
+
+          formulario.reset();
+
+        } else {
+
+          mensagemSucesso.textContent =
+            "Não foi possível enviar a mensagem. Tente novamente.";
+
+        }
+
+      } catch (erro) {
+
+        mensagemSucesso.textContent =
+          "Erro de conexão. Tente novamente.";
+
+      }
+
+
+      /* Libera novamente o botão */
+
+      botaoEnviar.disabled = false;
+      botaoEnviar.textContent =
+        "Enviar mensagem";
+
+    }
+  );
+
+</script>
+
+ 
 </body>
 
 </html>
